@@ -1,0 +1,5 @@
+ibrary(ggplot2)
+trainData <- read.csv(
+url("http://s3-eu-west-1.amazonaws.com/dpadata/dataScience/train.csv"))
+g <- ggplot(trainData, aes(Age, Pclass))
+g + geom_point(aes(color=Sex)) + facet_grid(Survived ~.)
